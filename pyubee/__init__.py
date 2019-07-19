@@ -185,6 +185,22 @@ MODELS = {
         ),
         'authenticator': Evw3226Authenticator
     },
+    'UBC1318@Ziggo': {
+        'url_session_active': '/htdocs/HomePageUBC1318ZG.php',
+        'url_login': '/htdocs/login_check.php',
+        'url_logout': '/htdocs/unauth.php',
+        # includes all devices, also WiFi
+        'url_connected_devices_lan': '/htdocs/ConnectedDevicesUBC1318ZG.php',
+        # there is no separate page with WiFi devices
+        'url_connected_devices_wifi': None,
+        'regex_login': re.compile(r'name="loginPassword"'),
+        'regex_wifi_devices': None,
+        'regex_lan_devices': re.compile(
+            r'"connecteddevices_mr4_ziggo_mac_address":"([0-9a-fA-F:]{17})",'  # mac address
+            r'"connecteddevices_mr4_ziggo_ip_address":"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})",'  # ip address
+        ),
+        'authenticator': DefaultAuthenticator
+    },
 }
 
 MODEL_ALIASES = {

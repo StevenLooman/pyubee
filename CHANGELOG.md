@@ -1,6 +1,9 @@
 # PyUbee CHANGELOG
 This file is used to list changes made in each version of the PyUbee.
 
+## 0.8
+* Support for UBC1318 (Ziggo) ([@StevenLooman](http://github.com/StevenLooman))
+
 ## 0.7
 * Support for EVW321B (Ziggo) ([@karrukola](Filippo Carra))
 
